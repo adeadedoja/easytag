@@ -15,7 +15,7 @@ function returntext(newurl,text){
 function newurl(text,url){
 
                 var href = url;
-                var index = href.indexOf('/wp-content/plugins/EasyTag/js');
+                var index = href.indexOf('/wp-content/plugins/easytag-master/js');
                 var homeUrl = href.substring(0, index);
                 var sel = slugify(text);
                 var newurl = homeUrl + "/tag/"+sel;
