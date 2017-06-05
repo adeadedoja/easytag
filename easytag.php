@@ -10,7 +10,7 @@ Author: Adedoja Dami
 function enqueue_plugin_scripts($plugin_array)
 {
     //enqueue TinyMCE plugin script with its ID.
-    $plugin_array["easytag_plugin"] =  plugin_dir_url(__FILE__) . "/js/index.js";
+    $plugin_array["easytag_plugin"] =  plugin_dir_url(__FILE__) . "js/index.js";
     return $plugin_array;
 }
 

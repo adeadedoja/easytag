@@ -15,11 +15,19 @@ function returntext(newurl,text){
 function newurl(text,url){
 
                 var href = url;
-                var index = href.indexOf('/wp-content/plugins/EasyTag');
+                var index = href.indexOf('/wp-content/plugins/EasyTag/js');
                 var homeUrl = href.substring(0, index);
                 var sel = slugify(text);
                 var newurl = homeUrl + "/tag/"+sel;
                 return newurl;
+}
+
+function correcturl(url){
+
+                var href = url;
+                var index = href.indexOf('/js');
+                var homeUrl = href.substring(0, index);
+                return homeUrl;
 }
 
 (function() {
@@ -32,7 +40,7 @@ function newurl(text,url){
             ed.addButton("easytag", {
                 title : "Easy Tags",
                 cmd : "easytag_command",
-                image : url+"/img/tag.png"
+                image : correcturl(url)+"/img/tag.png"
             });
 
             //button functionality.
